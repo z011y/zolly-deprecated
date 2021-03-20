@@ -27,7 +27,7 @@ export default function Layout({
   const router = useRouter();
 
   return (
-    <div>
+    <LayoutWrapper>
       <Head>
         <title>zolly's portfolio</title>
         <link rel="icon" href="/favicon.ico" />
@@ -62,18 +62,13 @@ export default function Layout({
       </SideBar>
 
       <Main>{children}</Main>
-    </div>
+    </LayoutWrapper>
   );
 }
 
-const Header = styled.header`
-  position: fixed;
-  top: 0;
-  right: 0;
+const LayoutWrapper = styled.div`
   width: 100%;
-  height: 118px;
   z-index: 2;
-  padding: 0 48px 0 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -81,6 +76,18 @@ const Header = styled.header`
   svg {
     height: 24px;
   }
+`;
+
+const Header = styled.div`
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 118px;
+  padding-left: 120px;
+  padding-right: 48px;
 `;
 
 const Socials = styled.div`
@@ -121,4 +128,5 @@ const Main = styled.main`
   width: 100%;
   padding-top: 118px;
   padding-left: 72px;
+  height: 100%;
 `;

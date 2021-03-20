@@ -84,10 +84,9 @@ const StyledContent = styled.div`
 
 const StyledGrid = styled.div`
   display: grid;
-  grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr) minmax(
-      300px,
-      1fr
-    ) minmax(300px, 1fr);
+  grid-template-columns:
+    minmax(300px, 1fr) minmax(300px, 1fr) minmax(300px, 1fr)
+    minmax(300px, 1fr);
   width: calc(100vw - 168px);
   background-color: ${(props) => props.theme.accent};
   border-radius: 20px;

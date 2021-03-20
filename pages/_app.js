@@ -1,5 +1,5 @@
-import { ThemeProvider } from "styled-components";
 import { useState } from "react";
+import { ThemeProvider } from "styled-components";
 
 import Layout from "../components/layout";
 import { GlobalStyles, dark, light } from "../styles/global";
@@ -13,17 +13,17 @@ function App({ Component, pageProps }) {
   };
 
   const rehydrateTheme = () => {
-    setDarkTheme(!darkTheme);
+    setDarkTheme(false);
   };
 
   return (
     <ThemeProvider theme={darkTheme ? dark : light}>
-      <GlobalStyles />
       <Layout
+        darkTheme={darkTheme}
         toggleTheme={toggleTheme}
         rehydrateTheme={rehydrateTheme}
-        darkTheme={darkTheme}
       >
+        <GlobalStyles />
         <Component {...pageProps} />
       </Layout>
     </ThemeProvider>

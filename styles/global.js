@@ -32,8 +32,14 @@ export const GlobalStyles = createGlobalStyle`
     font-family: "DM Sans", BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   }
 
+  #__next {
+    width: 100%;
+  }
+
   a {
     text-decoration: none;
+    font-size: 14px;
+    color: #000;
   }
 
   h1 {
